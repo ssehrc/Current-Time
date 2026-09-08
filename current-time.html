@@ -4,17 +4,36 @@
     
     <head>
         <title>Current Time</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!--responsive time-->
+
         <link rel="stylesheet" href="styles/current-time.css">
         <link rel="stylesheet" href="styles/change-time-zone.css">
         
     </head>
     <body>
-        <button class="js-time-zone time-zone">Europe</button>
-        <div class="js-time time">06:10:23</div>
-        <div class="js-date date"></div>
 
-        <script src="scripts/current-time.js"></script>
+        <div class="container">
+            <div id="change-timezone">Europe</div>
+            <div id="js-time"> 
+                <span id="hrs">00</span>
+                <span>:</span>
+                <span id="mins">00</span> 
+                <span>:</span> 
+                <span id="secs">00</span>  
+            </div>
+            <div id="js-date">
+                <span id="date">Monday, 1 September, 2026</span>
+            </div>
+        </div>
+        
         <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/utc.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/timezone.js"></script>
+        <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+        <script src="scripts/current-time.js"></script>
+        
+
     </body>
     
 </html>
