@@ -1,0 +1,4 @@
+import MicroModal from "micromodal";
+
+MicroModal.init();
+MicroModal.show('modal-1');

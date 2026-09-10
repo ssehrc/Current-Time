@@ -27,7 +27,7 @@ function currentDate(){
 
 currentDate(); //displays
 
-function currentTimezone(){
+function currentTimezone(){ //current timezone 
     const timezone = document.getElementById("open-timezone-window");
 
     timezone.textContent = dayjs.tz.guess();
