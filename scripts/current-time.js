@@ -4,6 +4,7 @@
 dayjs.extend(window.dayjs_plugin_utc);
 dayjs.extend(window.dayjs_plugin_timezone);
 
+//this the function for the time of the current timezone selected
 function currentTime(){
     const hrs = document.getElementById("hrs");
     const mins = document.getElementById("mins");
@@ -12,8 +13,23 @@ function currentTime(){
     hrs.textContent = dayjs().format("hh");
     mins.textContent = dayjs().format("mm");
     secs.textContent = dayjs().format("ss A");
-
 }
 
-setInterval(currentTime, 1000);
-currentTime();
+setInterval(currentTime, 1000);//will update time every millisecond
+currentTime(); //displays
+
+//this is the function for the date of the current timezone selected
+function currentDate(){
+    const date = document.getElementById("date");
+
+    date.textContent = dayjs().format("dddd, D MMMM, YYYY");
+}
+
+currentDate(); //displays
+
+function currentTimezone(){
+    const timezone = document.getElementById("open-timezone-window");
+
+    timezone.textContent = dayjs.tz.guess();
+}
+currentTimezone();
