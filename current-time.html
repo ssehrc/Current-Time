@@ -9,25 +9,11 @@
 
         <link rel="stylesheet" href="styles/current-time.css">
         <link rel="stylesheet" href="styles/change-time-zone.css">
+        <link rel="stylesheet" href="styles/micromodal.css">
         
     </head>
     <body>
-
-        <div class="container">
-            <button id="open-timezone-window">Timezone</button>
-            <div id="js-time"> 
-                <span id="hrs">00</span>
-                <span>:</span>
-                <span id="mins">00</span> 
-                <span>:</span> 
-                <span id="secs">00</span>  
-            </div>
-            <div id="js-date">
-                <span id="date">dddd, D MMMM, YYYY</span>
-            </div>
-        </div>
         
-        <div class="change-timezone-pop-up">
             <!-- show/hide.                 tells readers the modal is hidden initially-->
             <div id="modal-1" aria-hidden="true">
                 <!-- not navigated by keyboard      clicking this closes the modal -->
@@ -50,7 +36,23 @@
                     </div>
                 </div>
             </div>
+        
+        <div class="container">
+            <button id="open-timezone-window" >Timezone</button>
+            
+            <div id="js-time"> 
+                <span id="hrs">00</span>
+                <span>:</span>
+                <span id="mins">00</span> 
+                <span>:</span> 
+                <span id="secs">00</span>  
+            </div>
+            <div id="js-date">
+                <span id="date">dddd, D MMMM, YYYY</span>
+            </div>
         </div>
+        
+        
         <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/utc.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/timezone.js"></script>

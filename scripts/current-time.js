@@ -33,3 +33,12 @@ function currentTimezone(){ //current timezone
     timezone.textContent = dayjs.tz.guess();
 }
 currentTimezone();
+
+function updateTimezone(){
+    
+    let currentTimezone = dayjs.tz.guess();
+    const tz = window.selectedTimezone || currentTimezone;
+
+}
+
+updateTimezone();

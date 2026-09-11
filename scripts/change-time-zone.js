@@ -1,5 +1,3 @@
-import MicroModal from "micromodal";
-
 MicroModal.init();
 
 //get timezone button
@@ -10,7 +8,7 @@ timezoneButton.addEventListener("click", function(){
 });
 
 //will handle timezone selection
-document.querySelectorAll("timezone-option").forEach(button => {
+document.querySelectorAll(".timezone-option").forEach(button => {
     button.addEventListener("click", function(){
         const selectedTimezone = this.getAttribute("data-timezone");
 
